@@ -1,0 +1,11 @@
+.clock-mark {
+  position: absolute;
+  border-top-style: solid;
+  height: 100%;
+
+  &__value {
+    position: absolute;
+    font-size: 12px;
+    top: 0;
+  }
+}
