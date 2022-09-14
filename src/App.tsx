@@ -1,9 +1,13 @@
-import { Clock } from "./components/Clock"
+import { RealtimeClock } from '@components/RealtimeClock';
+import { TimeService } from '@services/Time';
 
 function App() {
-  return <div className="app">
-    <Clock time={new Date()} />
-  </div>
+  const timeService = new TimeService();
+  return (
+    <div className="app">
+      <RealtimeClock size={300} timeService={timeService} />
+    </div>
+  );
 }
 
-export default App
+export default App;
