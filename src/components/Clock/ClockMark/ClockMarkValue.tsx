@@ -1,7 +1,7 @@
-import { useContext } from 'react';
+import { memo, useContext } from 'react';
 import { ClockMarkContext } from './ClockMark';
 
-export const ClockMarkValue = () => {
+export const ClockMarkValue = memo(() => {
   const markValue = useContext(ClockMarkContext);
   return (
     <span
@@ -13,4 +13,4 @@ export const ClockMarkValue = () => {
       {markValue.value}
     </span>
   );
-};
+});
